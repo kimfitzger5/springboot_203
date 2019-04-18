@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<body lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#"th:action="@{/songform}"th:object="${song}"
+      method="post">
+    Name:<input type="text"th:field="*{name}"/><br />
+    Name:<input type="text"th:field="*{artist}"/><br />
+    Name:<input type="text"th:field="*{albulm}"/><br />
+    Rating: <input type="number" th:field="*{rating}"/><br />
+    Year: <input type="number" th:field="*{year}"/><br />
+    <input type="submit" value="Submit"/>
+</form></body>
+</body>
+<p th:inline="text">The song name was [[${song.name}]].br />
+The artist name is [[${song.artist}]].<br />
+The album name is [[${song.album}]].<br />
+The rating name is [[${song.rating}]]and the year it came out on was
+    [[${song.year}]].</p>
+</body>
+
+</p>
+</html>
